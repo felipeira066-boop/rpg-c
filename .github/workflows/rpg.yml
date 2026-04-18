@@ -18,7 +18,7 @@ jobs:
         run: x86_64-w64-mingw32-gcc main.c hp.c level.c item.c especialidade.c class.c -o rpg.exe
 
       - name: Publicar o exe
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: rpg-windows
           path: rpg.exe
