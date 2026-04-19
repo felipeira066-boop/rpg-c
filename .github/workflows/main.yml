@@ -14,8 +14,8 @@ jobs:
       - name: Instalar MinGW
         run: sudo apt install mingw-w64 -y
 
-      - name: Compilar para Windows
-        run: x86_64-w64-mingw32-gcc main.c hp.c level.c item.c class.c -o rpg.exe
+      - name: Compilar para Windows com Makefile
+        run: make CC=x86_64-w64-mingw32-gcc TARGET=rpg.exe
 
       - name: Publicar o exe
         uses: actions/upload-artifact@v4
